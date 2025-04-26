@@ -4,6 +4,7 @@
 
 :root {
   --cor0: #171224;
+  --cor01:rgb(26, 21, 41);
   --cor1: #fae525;
   --cor2: #969696;
   --cor3: rgb(229, 77, 243);
@@ -375,12 +376,14 @@ section {
 }
 
 .item {
+  background-color: var(--cor01);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: .8rem;
   color: white;
   display: flex;
   flex-direction: row;
   align-items: left;
   justify-content: space-between;
-  width: 600px;
   gap: 4rem;
   font-family: var(--font-tilt);
   padding: 25px;
