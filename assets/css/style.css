@@ -3,19 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Tilt+Neon&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --cor0: #171224;
-  --cor01:rgb(26, 21, 41);
-  --cor1: #fae525;
+  --cor0:rgb(21, 18, 36);
+  --cor01:rgb(25, 23, 49);
+  --cor1:rgb(250, 236, 37);
   --cor2: #969696;
-  --cor3: rgb(229, 77, 243);
+  --cor3: rgb(241, 58, 232);
   --cor4: #2e2e2e;
-  --cor5: #464646;
+  --cor5:rgb(23, 22, 46);
   --cor6: #303030;
   --cor7: #3f3f3f;
-
-  --cor1-1: #8443af;
-  --cor2-1: #d27ce7;
-
+  
   --font-raleway: "Raleway", sans-serif;
   --font-rubik: "Rubik", sans-serif;
   --font-tilt: "Tilt Neon", sans-serif;
