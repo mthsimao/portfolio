@@ -1,5 +1,6 @@
 import blogLandingPageImg from "../assets/images/blog-landing-page.png";
 import feiraCeapImage from "../assets/images/feiraCeapImage.png";
+import gerenciadorTarefasImage from "../assets/images/gerenciadorTarefasImage.png"
 
 function Projects() {
   return (
@@ -18,6 +19,44 @@ function Projects() {
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 p-6 ml-auto mr-auto x5:w-[65vw] md:w-[85vw]">
+
+          <div className="card bg-b3 rounded-2xl ">
+            <div className="img ">
+              <img
+                src={gerenciadorTarefasImage}
+                className="w-fit rounded-t-2xl"
+                alt="Image of my project called Blog Landing Page"
+              />
+            </div>
+            <div className=" flex flex-col gap-10 p-6">
+              <div className="texts">
+                <h2 className="text-2xl font-medium mb-4">Gerenciador de Tarefas</h2>
+                <p className="text-sm text-p1">
+                  Meu primeiro projeto que eu fiz quando estava estudando React. Comecei fazendo esse projeto 
+                  para começar a entender o que a biblioteca do React é capaz de fazer utilizando components, state,
+                  e mais.
+                </p>
+              </div>
+              <div className="techs flex flex-row flex-wrap gap-2">
+                <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
+                  React
+                </span>
+                <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
+                  Tailwind CSS
+                </span>
+                <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
+                  JavaScript
+                </span>
+                <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
+                  HTML
+                </span>
+                <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
+                  CSS
+                </span>
+              </div>
+            </div>
+          </div>
+
           <div className="card bg-b3 rounded-2xl">
             <div className="img ">
               <img
@@ -38,48 +77,16 @@ function Projects() {
               </div>
               <div className="techs flex flex-row flex-wrap gap-2">
                 <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  HTML
-                </span>
-                <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  CSS
-                </span>
-                <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  JavaScript
-                </span>
-                <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
                   Tailwind CSS
                 </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="card bg-b3 rounded-2xl ">
-            <div className="img ">
-              <img
-                src={feiraCeapImage}
-                className="w-fit rounded-t-2xl"
-                alt="Image of my project called Blog Landing Page"
-              />
-            </div>
-            <div className=" flex flex-col gap-10 p-6">
-              <div className="texts">
-                <h2 className="text-2xl font-medium mb-4">Feira Ceap</h2>
-                <p className="text-sm text-p1">
-                  Com esse site que eu fiz para a feira de ciências da minha
-                  antiga escola, consegui ir para a maior feira de ciência e
-                  tecnologia do estado do Rio de Janeiro. Conseguindo o 2º lugar
-                  de projeto popular na área de tecnologia.
-                </p>
-              </div>
-              <div className="techs flex flex-row flex-wrap gap-2">
+                <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
+                  JavaScript
+                </span>
                 <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
                   HTML
                 </span>
                 <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
                   CSS
-                </span>
-                <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  JavaScript
                 </span>
               </div>
             </div>
@@ -105,17 +112,18 @@ function Projects() {
               </div>
               <div className="techs flex flex-row flex-wrap gap-2">
                 <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
+                  JavaScript
+                </span>
+                <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
                   HTML
                 </span>
                 <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
                   CSS
                 </span>
-                <span className="bg-3th text-5th text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  JavaScript
-                </span>
               </div>
             </div>
           </div>
+          
         </div>
       </section>
     </>

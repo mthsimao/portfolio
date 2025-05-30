@@ -3,7 +3,7 @@ function Experience() {
     <>
       <section
         id="experience"
-        className="bg-b3 pt-30 pb-30 w-full p-4"
+        className="bg-b1 pt-30 pb-30 w-full p-4"
       >
         <div className="container w-full mx-auto max-w-[64rem] ">
           <div className="mb-16 text-center max-w-2xl mx-auto">

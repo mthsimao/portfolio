@@ -4,26 +4,30 @@ import { X } from "lucide-react";
 function Header() {
   function openMenu() {
     const menu = document.querySelector("#nav");
-    const openMenu = document.querySelector("#openMenuIcon");
-    const closeMenu = document.querySelector("#closeMenuIcon");
+    const openIcon = document.querySelector("#openMenuIcon");
+    const closeIcon = document.querySelector("#closeMenuIcon");
 
-    if (!menu.classList.contains("hidden")) {
-      closeMenu.classList.toggle("hidden");
-      openMenu.classList.toggle("hidden");
-      menu.classList.toggle("hidden");
-    } else {
-      closeMenu.classList.toggle("hidden");
-      openMenu.classList.toggle("hidden");
-      menu.classList.toggle("hidden");
+    const isMenuVisible = !menu.classList.contains("hidden");
+
+    menu.classList.toggle("hidden");
+    openIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+
+    if (!isMenuVisible) {
+      const handleOutsideClick = (event) => {
+        if (!menu.contains(event.target) && !openIcon.contains(event.target)) {
+          menu.classList.add("hidden");
+          closeIcon.classList.add("hidden");
+          openIcon.classList.remove("hidden");
+
+          document.removeEventListener("click", handleOutsideClick);
+        }
+      };
+      setTimeout(() => {
+        // timeout para evitar fechar o menu imediatamente após abrir (por conta do próprio clique no botão)
+        document.addEventListener("click", handleOutsideClick);
+      }, 0);
     }
-
-    document.addEventListener("click", (event) => {
-      if (!menu.contains(event.target) && !openMenu.contains(event.target)) {
-        menu.classList.add("hidden");
-        closeMenu.classList.add("hidden");
-        openMenu.classList.remove("hidden");
-      }
-    });
   }
 
   return (
@@ -41,7 +45,7 @@ function Header() {
               <nav className="w-full absolute bg-black/95 flex flex-col top-16 left-0 gap-6 p-10 border-t md:relative md:bg-transparent md:flex-row md:top-0 md:border-0 md:p-0">
                 <a
                   href="#home"
-                  className="nav-link text-xl md:text-[.875rem] cursor-pointer"
+                  className="nav-link active text-xl md:text-[.875rem] cursor-pointer"
                 >
                   Início
                 </a>

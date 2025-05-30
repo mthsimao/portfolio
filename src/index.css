@@ -9,6 +9,7 @@
   --color-4th: #4169e1;
   --color-5th: #82afff;
   --color-p1: #a7afbe;
+  --color-p2: #e8ebed;
 
   --breakpoint-x5: 500px;
 }
@@ -23,15 +24,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
   --color-blue-cl: #82afff;
-
   --color-nd: #000032;
-  --color-3th: #002366;
-  --color-4th: #4169e1;
-  --color-5th: #82afff;
-  --color-6th: #a7afbe;
-
-  --bg-color: #4169e12d;
+}
+* {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -51,7 +49,7 @@ body {
   border-bottom: 2px solid transparent;
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-link.active {
   border-bottom: 2px solid var(--color-blue-cl);
 }
 

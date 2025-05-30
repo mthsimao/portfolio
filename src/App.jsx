@@ -1,17 +1,18 @@
 import { ArrowRight } from "lucide-react";
 import imageMe from "./assets/images/me.jpg";
-import Header from "./components/Header"
+import Header from "./components/Header";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
-  
   return (
     <div>
       <Header />
 
-      <main className="flex-grow pt-20 md:pt-0 bg-b1">
+      <div className="flex-grow pt-20 md:pt-0 bg-b2">
         <section
           id="home"
           className="relative min-h-[90vh] flex items-center section overflow-hidden px-4 pt-[5rem] md:pt-0"
@@ -30,7 +31,7 @@ function App() {
                 <div className="text-2xl md:text-3xl font-medium tracking-tight">
                   <div>
                     <p>
-                      Desenvolvendo Web interfaces poderosas e interativas para
+                      Desenvolvendo interfaces web poderosas e interativas para
                       o usuário
                     </p>
                   </div>
@@ -38,12 +39,12 @@ function App() {
 
                 <p className="text-lg text-[#a7afbe] max-w-xl">
                   Me especializando em React.js para criar as interfaces. É
-                  sempre um prazer transformar design em código.
+                  sempre um prazer transformar design em código, ou resolver problemas.
                 </p>
 
                 <div className="pt-4">
                   <a
-                    href="#skills"
+                    href="#contact"
                     className="inline-flex items-center gap-2 bg-[#4169e12d] px-6 py-4 rounded-3xl text-(--color-4th) font-medium transition-all hover:text-[#6a99ff] hover:scale-[1.08]"
                   >
                     Entre em contato <ArrowRight className="w-5 h-4" />
@@ -70,7 +71,11 @@ function App() {
         <Experience />
 
         <Projects />
-      </main>
+
+        <Contact />
+        
+        <Footer />
+      </div>
     </div>
   );
 }
