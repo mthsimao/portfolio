@@ -1,4 +1,4 @@
-# Portfólio Pessoal – [Seu Nome]
+# Portfólio Pessoal – [Matheus Simão]
 
 Bem-vindo ao meu portfólio! Este projeto foi desenvolvido com o objetivo de praticar e testar meus conhecimentos em **React**, já que estou começando minha jornada no desenvolvimento front-end com foco nessa biblioteca.
 
