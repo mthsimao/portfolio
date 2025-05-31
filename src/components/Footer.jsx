@@ -23,7 +23,7 @@ function Footer() {
 
             <div className="email">
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-p1/10 text-4th mr-4 hover:bg-4th hover:text-b1 transition-colors cursor-pointer">
-                <a href="https://github.com/mthsimao" target="_blank">
+                <a href="mailto:mthsimaoo@gmail.com" target="_blank">
                   <Mail />
                 </a>
               </div>
@@ -31,7 +31,7 @@ function Footer() {
 
             <div className="instagram">
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-p1/10 text-4th mr-4 hover:bg-4th hover:text-b1 transition-colors cursor-pointer">
-                <a href="https://github.com/mthsimao" target="_blank">
+                <a href="https://instagram.com/mthsimao" target="_blank">
                   <Instagram />
                 </a>
               </div>

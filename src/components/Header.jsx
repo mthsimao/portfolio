@@ -2,6 +2,29 @@ import { Menu } from "lucide-react";
 import { X } from "lucide-react";
 
 function Header() {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+
+      if (scrollY >= sectionTop - sectionHeight / 3) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
+
   function openMenu() {
     const menu = document.querySelector("#nav");
     const openIcon = document.querySelector("#openMenuIcon");
@@ -45,7 +68,7 @@ function Header() {
               <nav className="w-full absolute bg-black/95 flex flex-col top-16 left-0 gap-6 p-10 border-t md:relative md:bg-transparent md:flex-row md:top-0 md:border-0 md:p-0">
                 <a
                   href="#home"
-                  className="nav-link active text-xl md:text-[.875rem] cursor-pointer"
+                  className="nav-link text-xl md:text-[.875rem] cursor-pointer"
                 >
                   Início
                 </a>
