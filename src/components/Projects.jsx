@@ -174,7 +174,7 @@ function Projects() {
               <div className="flex flex-col gap-4 w-full">
                 <div className="w-full">
                   <a
-                    href="https://gerenciador-de-tarefas-ochre-gamma.vercel.app/"
+                    href="https://ceap-feira.vercel.app/"
                     target="_blank"
                     className="bg-p1/20 p-3 rounded-full text-4th text-sm text-center flex flex-row justify-center items-center gap-3 cursor-pointer transition-all font-medium hover:scale-[1.1] hover:bg-4th hover:text-black"
                   >
@@ -184,7 +184,7 @@ function Projects() {
 
                 <div className="w-full">
                   <a
-                    href="https://github.com/mthsimao/gerenciador-de-tarefas"
+                    href="https://github.com/mthsimao/ceap"
                     target="_blank"
                     className="bg-p1/20 p-3 rounded-full text-4th text-sm text-center flex flex-row justify-center items-center gap-3 cursor-pointer transition-all font-medium hover:scale-[1.1] hover:bg-4th hover:text-black"
                   >
