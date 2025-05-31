@@ -6,7 +6,7 @@ import { Instagram } from "lucide-react";
 function Contact() {
   return (
     <section id="contact">
-      <div className="bg-b2 p-10 ">
+      <div className="bg-b2 p-4 md:p-10 ">
         <div className="flex flex-col justify-center items-center gap-8">
 
           <div className="mb-16 text-center max-w-2xl mx-auto">
@@ -14,10 +14,10 @@ function Contact() {
             <p className="text-p1 text-xl">Interresado em me contratar? Vamos discutir seu projeto.</p>
           </div>
 
-          <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl shadow-sm p-8 h-full">
+          <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl shadow-sm p-4 h-full">
            
             <h3 className="text-2xl mb-10 font-medium">Entre em contato</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 space-x-15 space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 space-x-4 space-y-4 x5:space-x-15">
 
               <div className="flex items-center">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-p1/10 text-4th mr-4">
