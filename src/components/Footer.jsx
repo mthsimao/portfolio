@@ -1,5 +1,4 @@
-import { Github } from "lucide-react";
-import { Mail } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { Instagram } from "lucide-react";
 
 function Footer() {
@@ -23,8 +22,8 @@ function Footer() {
 
             <div className="email">
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-p1/10 text-4th mr-4 hover:bg-4th hover:text-b1 transition-colors cursor-pointer">
-                <a href="mailto:mthsimaoo@gmail.com" target="_blank">
-                  <Mail />
+                <a href="https://www.linkedin.com/in/matheus-sim%C3%A3o-74669022b/" target="_blank">
+                  <Linkedin />
                 </a>
               </div>
             </div>
