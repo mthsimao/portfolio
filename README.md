@@ -8,7 +8,6 @@ O projeto foi construído com as seguintes ferramentas modernas do ecossistema f
 
 - ⚡ **[Vite](https://vitejs.dev/)** – Ferramenta de build rápida e eficiente.
 - ⚛️ **[React](https://reactjs.org/)** – Biblioteca para construção de interfaces interativas.
-- 🎨 **[Tailwind CSS](https://tailwindcss.com/)** – Framework CSS utilitário para estilos rápidos e responsivos.
 - 🧩 **[Lucide React](https://lucide.dev/)** – Conjunto de ícones open-source baseado em SVG.
 
 ## 🎯 Propósito
@@ -17,7 +16,7 @@ Criei este portfólio com a intenção de:
 
 - Consolidar meus estudos iniciais em React;
 - Aplicar conceitos de componentização;
-- Utilizar Tailwind CSS para estilização moderna e eficiente;
+- Aplicar também conceitos de typescript;
 - Praticar boas práticas de desenvolvimento com Vite e React;
 - Ter um espaço para exibir meus projetos e evolução como desenvolvedor.
 
