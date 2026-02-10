@@ -26,9 +26,10 @@ Criei este portfólio com a intenção de:
 A estrutura do portfólio inclui:
 
 - **Página inicial** com uma breve apresentação;
-- **Habilidades** para exibir as tecnologias que eu utilizo;
+- **Seção sobre mim** para me conhecer um pouco mais;
 - **Experiência** para mostrar minha experiência profissional;
 - **Seção de projetos** para exibir meus trabalhos/projetos;
+- **Habilidades** para exibir as tecnologias que eu utilizo;
 - **Contato** com links para minhas redes e email.
 
 > Este projeto é apenas o começo. Pretendo continuar evoluindo o portfólio à medida que aprendo novas ferramentas e abordagens no desenvolvimento web.
