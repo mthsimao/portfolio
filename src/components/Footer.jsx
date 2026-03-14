@@ -1,49 +1,56 @@
-import { Github, Linkedin } from "lucide-react";
-import { Instagram } from "lucide-react";
+import { Github, Instagram, Linkedin, ArrowUp } from "lucide-react";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <>
-      <footer className="bg-b1 mt-15 border-t  border-white/10 ">
-        <div className=" py-15 px-8 flex flex-col gap-8 md:gap-0 md:flex-row justify-between items-center">
-          <div className="name text-center md:text-left">
-            <h2 className="text-lg font-medium">Matheus Simão</h2>
-            <p className="text-sm text-p1">Front end Developer</p>
+    <footer className="bg-zinc-950 border-t border-white/5 py-16">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          
+          {/* Branding */}
+          <div className="text-center md:text-left">
+            <h2 className="text-xl font-bold text-white tracking-tight">Matheus Simão</h2>
+            <p className="text-sm text-zinc-500 mt-1 font-medium tracking-wide uppercase">Front-end Developer</p>
           </div>
 
-          <div className="socials flex flex-row justify-center">
-            <div className="github">
-              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-p1/10 text-4th mr-4 hover:bg-4th hover:text-b1 transition-colors cursor-pointer">
-                <a href="https://github.com/mthsimao" target="_blank">
-                  <Github />
-                </a>
-              </div>
-            </div>
-
-            <div className="email">
-              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-p1/10 text-4th mr-4 hover:bg-4th hover:text-b1 transition-colors cursor-pointer">
-                <a href="https://www.linkedin.com/in/matheus-sim%C3%A3o-74669022b/" target="_blank">
-                  <Linkedin />
-                </a>
-              </div>
-            </div>
-
-            <div className="instagram">
-              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-p1/10 text-4th mr-4 hover:bg-4th hover:text-b1 transition-colors cursor-pointer">
-                <a href="https://instagram.com/mthsimao" target="_blank">
-                  <Instagram />
-                </a>
-              </div>
-            </div>
+          {/* Socials */}
+          <div className="flex items-center gap-4">
+            {[
+              { icon: <Github size={18} />, href: "https://github.com/mthsimao" },
+              { icon: <Instagram size={18} />, href: "https://instagram.com/mthsimao" },
+            ].map((social, idx) => (
+              <a
+                key={idx}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-zinc-900 border border-white/5 text-zinc-400 hover:bg-emerald-500 hover:text-black transition-all duration-300 hover:scale-110"
+              >
+                {social.icon}
+              </a>
+            ))}
           </div>
-          <div className="text-center md:text-right">
-            <p class="text-sm text-muted-foreground">
-              © 2025 Matheus Simão. All rights reserved.
+
+          {/* Copyright & Scroll Top */}
+          <div className="flex flex-col items-center md:items-end gap-4">
+            <p className="text-xs text-zinc-600 font-medium">
+              © {currentYear} Matheus Simão. All rights reserved.
             </p>
+            <button 
+              onClick={scrollToTop}
+              className="text-zinc-500 hover:text-white transition-colors flex items-center gap-2 text-xs font-bold uppercase tracking-widest"
+            >
+              Voltar ao topo <ArrowUp size={14} />
+            </button>
           </div>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }
 

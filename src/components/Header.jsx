@@ -1,117 +1,69 @@
-import { Menu } from "lucide-react";
-import { X } from "lucide-react";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 function Header() {
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-link");
+  const [isOpen, setIsOpen] = useState(false);
 
-  window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-
-      if (scrollY >= sectionTop - sectionHeight / 3) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  });
-
-  function openMenu() {
-    const menu = document.querySelector("#nav");
-    const openIcon = document.querySelector("#openMenuIcon");
-    const closeIcon = document.querySelector("#closeMenuIcon");
-
-    const isMenuVisible = !menu.classList.contains("hidden");
-
-    menu.classList.toggle("hidden");
-    openIcon.classList.toggle("hidden");
-    closeIcon.classList.toggle("hidden");
-
-    if (!isMenuVisible) {
-      const handleOutsideClick = (event) => {
-        if (!menu.contains(event.target) && !openIcon.contains(event.target)) {
-          menu.classList.add("hidden");
-          closeIcon.classList.add("hidden");
-          openIcon.classList.remove("hidden");
-
-          document.removeEventListener("click", handleOutsideClick);
-        }
-      };
-      setTimeout(() => {
-        // timeout para evitar fechar o menu imediatamente após abrir (por conta do próprio clique no botão)
-        document.addEventListener("click", handleOutsideClick);
-      }, 0);
-    }
-  }
+  const navLinks = [
+    { name: "Início", href: "#home" },
+    { name: "Habilidades", href: "#skills" },
+    { name: "Experiência", href: "#experience" },
+    { name: "Projetos", href: "#projects" },
+    { name: "Contato", href: "#contact" },
+  ];
 
   return (
-    <div className="flex flex-col">
-      <header className="fixed bg-black/90 md:bg-black/50 backdrop-blur-md transition-all hover:bg-black/80 hover:shadow-md top-0 left-0 right-0 w-full z-10 flex items-center justify-center">
-        <div className="flex items-center justify-between w-[90%] px-4 py-4">
-          <div className="title">
-            <h1 className="text-2xl font-bold text-gray-800 dark:text-white">
-              <a href="#">M</a>
-            </h1>
-          </div>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-white/10">
+      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#home" className="text-2xl font-black text-white">
+          M<span className="text-emerald-500">.</span>
+        </a>
 
-          <div className="flex items-center gap-10 bg">
-            <div className="menu hidden md:flex" id="nav">
-              <nav className="w-full absolute bg-black/95 flex flex-col top-16 left-0 gap-6 p-10 border-t md:relative md:bg-transparent md:flex-row md:top-0 md:border-0 md:p-0">
-                <a
-                  href="#home"
-                  className="nav-link text-xl md:text-[.875rem] cursor-pointer"
-                >
-                  Início
-                </a>
-                <a
-                  href="#skills"
-                  className="nav-link text-xl md:text-[.875rem] cursor-pointer"
-                >
-                  Habilidades
-                </a>
-                <a
-                  href="#experience"
-                  className="nav-link text-xl md:text-[.875rem] cursor-pointer"
-                >
-                  Experiência
-                </a>
-                <a
-                  href="#projects"
-                  className="nav-link text-xl md:text-[.875rem] cursor-pointer"
-                >
-                  Projetos
-                </a>
-                <a
-                  href="#contact"
-                  className="nav-link text-xl md:text-[.875rem] cursor-pointer"
-                >
-                  Contato
-                </a>
-              </nav>
-            </div>
+        {/* Menu Desktop */}
+        <nav className="hidden md:flex gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-zinc-400 hover:text-emerald-500 transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
+        </nav>
 
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={() => openMenu()}
-                className="md:hidden text-gray-800 dark:text-white hover:text-[#82AFFF] cursor-pointer"
-              >
-                <Menu className="w-6 h-6 " id="openMenuIcon" />
-                <X className="w-6 h-6 hidden" id="closeMenuIcon" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-    </div>
+        {/* Botão Mobile */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-white p-2"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Dropdown Menu com Efeito Glassmorphism */}
+      <div
+        className={`md:hidden absolute top-full left-0 w-full bg-zinc-950/95 backdrop-blur-2xl border-b border-white/5 transition-all duration-300 ease-in-out overflow-hidden shadow-2xl ${
+          isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        {/* Gradiente sutil no topo do dropdown para indicar profundidade */}
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+
+        <nav className="flex flex-col p-6 gap-4">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="text-lg font-medium text-zinc-300 hover:text-emerald-500 hover:pl-2 transition-all duration-300"
+            >
+              {link.name}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
   );
 }
 

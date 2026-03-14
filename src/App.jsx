@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import imageMe from "./assets/images/me.jpg";
 import Header from "./components/Header";
 import Skills from "./components/Skills";
@@ -9,73 +9,86 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
+    <div className="bg-zinc-950 text-white selection:bg-emerald-500/30">
       <Header />
 
-      <div className="flex-grow pt-20 md:pt-0 bg-b2">
+      <main className="grow pt-20 md:pt-0">
         <section
           id="home"
-          className="relative min-h-[90vh] flex items-center section overflow-hidden px-4 pt-[5rem] md:pt-0"
+          className="relative min-h-screen flex items-center overflow-hidden px-6 pt-24 md:pt-0"
         >
-          <div className="container w-full mx-auto max-w-[64rem]">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-              <div className="w-full md:w-7/12 space-y-6">
-                <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#4169e12d] text-(--color-4th) text-sm font-medium mb-4">
-                  <span>Desenvoledor Web Front-end</span>
+          {/* Elementos Decorativos de Fundo */}
+          <div className="absolute top-1/4 -left-20 w-96 h-96 bg-emerald-500/10 blur-[120px] rounded-full" />
+          <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/10 blur-[120px] rounded-full" />
+
+          <div className="container w-full mx-auto max-w-6xl relative z-1">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-16">
+              
+              {/* Texto Principal */}
+              <div className="w-full md:w-7/12 space-y-8 text-center md:text-left">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-widest animate-fade-in">
+                  <Sparkles size={14} />
+                  <span>Desenvolvedor Web Front-end</span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl font-medium tracking-tight">
-                  Matheus Simão
-                </h1>
-
-                <div className="text-2xl md:text-3xl font-medium tracking-tight">
-                  <div>
-                    <p>
-                      Desenvolvendo interfaces web poderosas e interativas para
-                      o usuário
-                    </p>
-                  </div>
+                <div className="space-y-4">
+                  <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-none">
+                    Matheus <span className="text-emerald-500">Simão</span>
+                  </h1>
+                  <h2 className="text-2xl md:text-4xl font-bold text-zinc-300 tracking-tight leading-tight">
+                    Desenvolvendo interfaces poderosas e experiências memoráveis.
+                  </h2>
                 </div>
 
-                <p className="text-lg text-[#a7afbe] max-w-xl">
-                  Me especializando em React.js para criar as interfaces. É
-                  sempre um prazer transformar design em código, ou resolver problemas.
+                <p className="text-lg text-zinc-400 max-w-xl leading-relaxed mx-auto md:mx-0">
+                  Me especializando em React.js para transformar conceitos complexos em 
+                  código limpo, performático e visualmente impecável.
                 </p>
 
-                <div className="pt-4">
+                <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-2 bg-[#4169e12d] px-6 py-4 rounded-3xl text-(--color-4th) font-medium transition-all hover:text-[#6a99ff] hover:scale-[1.08]"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white text-black px-6 py-2 rounded-full font-bold transition-all hover:bg-emerald-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] active:scale-95"
                   >
-                    Entre em contato <ArrowRight className="w-5 h-4" />
+                    Vamos conversar <ArrowRight size={20} />
+                  </a>
+                  <a
+                    href="#projects"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-zinc-900 border border-white/10 px-6 py-2 rounded-full font-bold text-white transition-all hover:bg-white/5 active:scale-95"
+                  >
+                    Ver Projetos
                   </a>
                 </div>
               </div>
 
+              {/* Foto de Perfil */}
               <div className="w-full md:w-5/12 flex justify-center md:justify-end">
-                <div className="bg-white/50 dark:bg-black/30 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm p-1 w-72 h-72 rounded-full overflow-hidden">
-                  <div className="w-full h-full rounded-full overflow-hidden border-4 border-background">
-                    <img
-                      src={imageMe}
-                      className="object-cover h-[300px] w-full"
-                    />
+                <div className="relative group">
+                  {/* Moldura Animada */}
+                  <div className="absolute -inset-1 bg-gradient-to-tr from-emerald-500 to-blue-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
+                  
+                  <div className="relative bg-zinc-900 p-2 w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border border-white/10">
+                    <div className="w-full h-full rounded-full overflow-hidden transition-all duration-700 ease-in-out">
+                      <img
+                        src={imageMe}
+                        alt="Matheus Simão"
+                        className="object-cover h-full w-full transition-transform duration-700"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </section>
 
         <Skills />
-
         <Experience />
-
         <Projects />
-
         <Contact />
-        
         <Footer />
-      </div>
+      </main>
     </div>
   );
 }

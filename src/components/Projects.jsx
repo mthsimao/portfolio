@@ -1,6 +1,5 @@
-import blogLandingPageImg from "../assets/images/blog-landing-page.png";
 import feiraCeapImage from "../assets/images/feiraCeapImage.png";
-import gerenciadorTarefasImage from "../assets/images/gerenciadorTarefasImage.png";
+import smartWallet from "../assets/images/smart-wallet.png";
 import { Github } from "lucide-react";
 import { Link } from "lucide-react";
 
@@ -9,188 +8,116 @@ function Projects() {
     <>
       <section
         id="projects"
-        className="bg-b2 min-h-screen text-white flex flex-col justify-center items-center pt-20 pb-20"
+        className="relative bg-zinc-950 text-white py-24 px-6 overflow-hidden"
       >
-        <div className="mb-16 text-center max-w-2xl mx-auto p-6">
-          <h2 className="mb-4 text-2xl md:text-3xl font-medium tracking-tight">
-            Projetos Recentes
-          </h2>
-          <p className="text-p1 text-xl">
-            Uma seleção dos meus trabalhos mais impactantes.
-          </p>
-        </div>
+        {/* Gradiente de fundo sutil para separar as seções */}
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 ml-auto mr-auto x5:w-[70vw] md:w-[85vw]">
-
-          <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl shadow-sm h-full ">
-            <div className="img ">
-              <img
-                src={gerenciadorTarefasImage}
-                className="w-fit rounded-t-2xl"
-                alt="Image of my project called Blog Landing Page"
-              />
-            </div>
-            <div className=" flex flex-col justify-between gap-10 p-6">
-              <div className="texts">
-                <h2 className="text-2xl font-medium mb-4">
-                  Gerenciador de Tarefas
-                </h2>
-                <p className="text-sm text-p1">
-                  Meu primeiro projeto que eu fiz quando estava estudando React.
-                  Comecei fazendo esse projeto para começar a entender o que a
-                  biblioteca do React é capaz de fazer utilizando components,
-                  state, e mais.
-                </p>
-              </div>
-              <div className="flex flex-row flex-wrap gap-2">
-                <span className="bg-p1/15 text-p1 text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  React
-                </span>
-                <span className="bg-p1/15 text-p1 text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  Tailwind CSS
-                </span>
-                <span className="bg-p1/15 text-p1 text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  JavaScript
-                </span>
-                <span className="bg-p1/15 text-p1 text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  HTML
-                </span>
-                <span className="bg-p1/15 text-p1 text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  CSS
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-4 w-full">
-                <div className="w-full">
-                  <a
-                    href="https://gerenciador-de-tarefas-ochre-gamma.vercel.app/"
-                    target="_blank"
-                    className="bg-p1/20 p-3 rounded-full text-4th text-sm text-center flex flex-row justify-center items-center gap-3 cursor-pointer transition-all font-medium hover:scale-[1.1] hover:bg-4th hover:text-black"
-                  >
-                    Ver projeto <Link className="w-4 h-4" />
-                  </a>
-                </div>
-
-                <div className="w-full">
-                  <a
-                    href="https://github.com/mthsimao/gerenciador-de-tarefas"
-                    target="_blank"
-                    className="bg-p1/20 p-3 rounded-full text-4th text-sm text-center flex flex-row justify-center items-center gap-3 cursor-pointer transition-all font-medium hover:scale-[1.1] hover:bg-4th hover:text-black"
-                  >
-                    Ver repositório <Github className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
-            </div>
+        <div className="container mx-auto max-w-[72rem]">
+          <div className="mb-16 max-w-2xl">
+            <span className="text-emerald-500 font-semibold tracking-widest uppercase text-xs">
+              Portfólio
+            </span>
+            <h2 className="mt-4 mb-6 text-3xl md:text-4xl font-bold tracking-tight">
+              Projetos Recentes
+            </h2>
+            <p className="text-zinc-400 text-lg leading-relaxed">
+              Uma seleção de aplicações onde combinei design focado no usuário e
+              performance técnica.
+            </p>
           </div>
 
-          <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl shadow-sm h-full">
-            <div className="img ">
-              <img
-                src={blogLandingPageImg}
-                className="w-fit rounded-t-2xl"
-                alt="Image of my project called Blog Landing Page"
-              />
-            </div>
-            <div className=" flex flex-col justify-between gap-10 h-fit p-6">
-              <div className="texts">
-                <h2 className="text-2xl font-medium mb-4">Blog Landing Page</h2>
-                <p className="text-sm text-p1">
-                  Uma modesta landing page que eu fiz para aprender sobre
-                  Tailwind CSS. Para tornar a página mais interativa, eu
-                  utilizei o JavaScript, assim aprimorando ainda mais meus
-                  conhecimentos sobre essa tecnologia.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            {/* Projeto 1: Carteira Inteligente */}
+            <div className="group flex flex-col">
+              <a
+                href="https://carteira-inteligente.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative block aspect-video overflow-hidden rounded-2xl bg-zinc-900 border border-white/5 transition-all duration-500 group-hover:border-emerald-500/30 group-hover:shadow-[0_20px_50px_rgba(16,185,129,0.1)]"
+              >
+                {/* Overlay de brilho no hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+
+                <img
+                  src={smartWallet} // Aqui use a imagem do notebook que geramos
+                  alt="Carteira Inteligente"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </a>
+
+              <div className="mt-6">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="text-2xl font-bold group-hover:text-emerald-400 transition-colors">
+                      Planejador Financeiro Pessoal
+                    </h3>
+                    <div className="flex gap-2 mt-2">
+                      <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-zinc-800 text-zinc-400 border border-zinc-700">
+                        React
+                      </span>
+                      <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-zinc-800 text-zinc-400 border border-zinc-700">
+                        Tailwind
+                      </span>
+                      <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-zinc-800 text-zinc-400 border border-zinc-700">
+                        TypeScript
+                      </span>
+                      <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-zinc-800 text-zinc-400 border border-zinc-700">
+                        IA
+                      </span>
+                    </div>
+                  </div>
+                  <span className="text-zinc-500 font-mono text-sm">2026</span>
+                </div>
+                <p className="mt-4 text-zinc-400 text-sm leading-relaxed">
+                  Dashboard intuitivo para controle de gastos com processamento
+                  de linguagem natural e visualização dinâmica de dados
+                  financeiros.
                 </p>
               </div>
-              <div className="flex flex-row flex-wrap gap-2 ">
-                <span className="bg-p1/15 text-p1 text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  Tailwind CSS
-                </span>
-                <span className="bg-p1/15 text-p1 text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  JavaScript
-                </span>
-                <span className="bg-p1/15 text-p1 text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  HTML
-                </span>
-                <span className="bg-p1/15 text-p1 text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  CSS
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-4 w-full">
-                <div className="w-full">
-                  <a
-                    href="https://blog-landing-page-phi.vercel.app/"
-                    target="_blank"
-                    className="bg-p1/20 p-3 rounded-full text-4th text-sm text-center flex flex-row justify-center items-center gap-3 cursor-pointer transition-all font-medium hover:scale-[1.1] hover:bg-4th hover:text-black"
-                  >
-                    Ver projeto <Link className="w-4 h-4" />
-                  </a>
-                </div>
-
-                <div className="w-full">
-                  <a
-                    href="https://github.com/mthsimao/blog-landing-page"
-                    target="_blank"
-                    className="bg-p1/20 p-3 rounded-full text-4th text-sm text-center flex flex-row justify-center items-center gap-3 cursor-pointer transition-all font-medium hover:scale-[1.1] hover:bg-4th hover:text-black"
-                  >
-                    Ver repositório <Github className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
 
-          <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl shadow-sm h-full ">
-            <div className="img ">
-              <img
-                src={feiraCeapImage}
-                className="w-fit rounded-t-2xl"
-                alt="Image of my project called Blog Landing Page"
-              />
-            </div>
-            <div className=" flex flex-col gap-10 p-6">
-              <div className="texts">
-                <h2 className="text-2xl font-medium mb-4">Feira Ceap</h2>
-                <p className="text-sm text-p1">
-                  Com esse site que eu fiz para a feira de ciências da minha
-                  antiga escola, consegui ir para a maior feira de ciência e
-                  tecnologia do estado do Rio de Janeiro. Conseguindo o 2º lugar
-                  de projeto popular na área de tecnologia.
+            {/* Projeto 2: Mostra Científica */}
+            <div className="group flex flex-col">
+              <a
+                href="https://ceap-feira.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative block aspect-video overflow-hidden rounded-2xl bg-zinc-900 border border-white/5 transition-all duration-500 group-hover:border-blue-500/30 group-hover:shadow-[0_20px_50px_rgba(59,130,246,0.1)]"
+              >
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+
+                <img
+                  src={feiraCeapImage} // Aqui use a imagem do monitor que geramos
+                  alt="Feira Ceap"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </a>
+
+              <div className="mt-6">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="text-2xl font-bold group-hover:text-blue-400 transition-colors">
+                      Mostra Científica CEAP
+                    </h3>
+                    <div className="flex gap-2 mt-2">
+                      <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-zinc-800 text-zinc-400 border border-zinc-700">
+                        UI/UX
+                      </span>
+                      <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-zinc-800 text-zinc-400 border border-zinc-700">
+                        Responsive
+                      </span>
+                    </div>
+                  </div>
+                  <span className="text-zinc-500 font-mono text-sm">2024</span>
+                </div>
+                <p className="mt-4 text-zinc-400 text-sm leading-relaxed">
+                  Plataforma organizacional para mostrar o evento escolar,
+                  centralizando cronogramas interativos e acervo de projetos
+                  para visitantes.
                 </p>
-              </div>
-              <div className="flex flex-row flex-wrap gap-2">
-                <span className="bg-p1/15 text-p1 text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  JavaScript
-                </span>
-                <span className="bg-p1/15 text-p1 text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  HTML
-                </span>
-                <span className="bg-p1/15 text-p1 text-xs font-medium text-center px-2 py-1 rounded-4xl">
-                  CSS
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-4 w-full">
-                <div className="w-full">
-                  <a
-                    href="https://ceap-feira.vercel.app/"
-                    target="_blank"
-                    className="bg-p1/20 p-3 rounded-full text-4th text-sm text-center flex flex-row justify-center items-center gap-3 cursor-pointer transition-all font-medium hover:scale-[1.1] hover:bg-4th hover:text-black"
-                  >
-                    Ver projeto <Link className="w-4 h-4" />
-                  </a>
-                </div>
-
-                <div className="w-full">
-                  <a
-                    href="https://github.com/mthsimao/ceap"
-                    target="_blank"
-                    className="bg-p1/20 p-3 rounded-full text-4th text-sm text-center flex flex-row justify-center items-center gap-3 cursor-pointer transition-all font-medium hover:scale-[1.1] hover:bg-4th hover:text-black"
-                  >
-                    Ver repositório <Github className="w-4 h-4" />
-                  </a>
-                </div>
               </div>
             </div>
           </div>

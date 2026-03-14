@@ -1,86 +1,100 @@
-import { Mail } from "lucide-react";
-import { Github } from "lucide-react";
-import { Linkedin } from "lucide-react";
-import { Instagram } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram, ArrowRight } from "lucide-react";
 
 function Contact() {
-  return (
-    <section id="contact">
-      <div className="bg-b2 p-4 md:p-10 ">
-        <div className="flex flex-col justify-center items-center gap-8">
+  const socialLinks = [
+    {
+      label: "Email",
+      value: "mthsimaoo@gmail.com",
+      href: "mailto:mthsimaoo@gmail.com",
+      icon: <Mail size={20} />,
+      color: "hover:border-emerald-500/50",
+      text: "text-emerald-500",
+    },
+    {
+      label: "Github",
+      value: "@mthsimao",
+      href: "https://github.com/mthsimao",
+      icon: <Github size={20} />,
+      color: "hover:border-zinc-400/50",
+      text: "text-zinc-400",
+    },
+    {
+      label: "Instagram",
+      value: "@mthsimao",
+      href: "https://instagram.com/mthsimao",
+      icon: <Instagram size={20} />,
+      color: "hover:border-pink-500/50",
+      text: "text-pink-500",
+    },
+  ];
 
-          <div className="mb-16 text-center max-w-2xl mx-auto">
-            <h2 className="mb-4 text-2xl md:text-3xl font-medium tracking-tight">Entre em contato</h2>
-            <p className="text-p1 text-xl">Interresado em me contratar? Vamos discutir seu projeto.</p>
+  return (
+    <section
+      id="contact"
+      className="relative bg-zinc-950 py-24 px-6 overflow-hidden"
+    >
+      {/* Background Decorativo */}
+    
+
+      <div className="container mx-auto max-w-[64rem] relative z-10">
+        <div className="flex flex-col items-center">
+          <div className="mb-16 text-center max-w-2xl">
+            <span className="text-emerald-500 font-semibold tracking-widest uppercase text-xs">
+              Disponibilidade
+            </span>
+            <h2 className="mt-4 mb-6 text-3xl md:text-4xl font-bold tracking-tight text-white">
+              Vamos discutir seu próximo projeto?
+            </h2>
+            <div className="h-1 w-20 bg-emerald-500 mx-auto rounded-full mb-6" />
+            <p className="text-zinc-400 text-lg leading-relaxed">
+              Atualmente estou aberto a novas oportunidades e parcerias em
+              projetos de desenvolvimento frontend.
+            </p>
           </div>
 
-          <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-2xl shadow-sm p-4 h-full">
-           
-            <h3 className="text-2xl mb-10 font-medium">Entre em contato</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 space-x-4 space-y-4 x5:space-x-15">
-
-              <div className="flex items-center">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-p1/10 text-4th mr-4">
-                  <Mail />
-                </div>
-                <div>
-                  <p className="text-sm text-p1 mb-1">Email</p>
-                  <a
-                    href="mailto:mthsimaoo@gmail.com"
-                    className="text-p2 hover:text-5th transition-colors"
+          <div className="w-full bg-zinc-900/40 border border-white/5 rounded-3xl p-8 md:p-12 shadow-2xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {socialLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group flex flex-row items-center gap-4 p-2 rounded-2xl border border-transparent ${link.color} bg-white/5 transition-all duration-300 hover:-translate-y-1`}
+                >
+                  <div
+                    className={`w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-800 ${link.text} transition-transform group-hover:scale-110`}
                   >
-                    mthsimaoo@gmail.com
-                  </a>
-                </div>
-              </div>
+                    {link.icon}
+                  </div>
+                  <div className="flex flex-col ">
+                    <p className="text-xs font-bold uppercase tracking-widest text-zinc-500">
+                      {link.label}
+                    </p>
+                    <span className="text-sm font-medium text-zinc-300 group-hover:text-white transition-colors">
+                      {link.value}
+                    </span>
+                  </div>
 
-              <div className="flex items-center">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-p1/10 text-4th mr-4">
-                  <Github />
-                </div>
-                <div>
-                  <p className="text-sm text-p1 mb-1">Github</p>
-                  <a
-                    href="https://github.com/mthsimao"
-                    target="_blank"
-                    className="text-p2 hover:text-5th transition-colors"
-                  >
-                    @mthsimao
-                  </a>
-                </div>
-              </div>
+                  <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ArrowRight size={16} className={link.text} />
+                  </div>
+                </a>
+              ))}
+            </div>
 
-              <div className="flex items-center">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-p1/10 text-4th mr-4">
-                  <Linkedin />
-                </div>
-                <div>
-                  <p className="text-sm text-p1 mb-1">LinkedIn</p>
-                  <a
-                    href="https://www.linkedin.com/in/matheus-sim%C3%A3o-74669022b/"
-                    target="_blank"
-                    className="text-p2 hover:text-5th transition-colors"
-                  >
-                    in/mthsimao
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-p1/10 text-4th mr-4">
-                  <Instagram />
-                </div>
-                <div>
-                  <p className="text-sm text-p1 mb-1">Instagram</p>
-                  <a
-                    href="https://instagram.com/mthsimao"
-                    target="_blank"
-                    className="text-p2 hover:text-5th transition-colors"
-                  >
-                    @mthsimao
-                  </a>
-                </div>
-              </div>
+            {/* CTA Final */}
+            <div className="mt-16 text-center border-t border-white/5 pt-12">
+              <p className="text-zinc-500 text-sm mb-4">
+                Prefere uma conversa direta?
+              </p>
+              <a
+                href="mailto:mthsimaoo@gmail.com"
+                className="inline-flex items-center gap-2 px-6 py-2 bg-emerald-500 hover:bg-emerald-400 text-black font-bold rounded-full transition-all hover:shadow-[0_0_30px_rgba(16,185,129,0.3)]"
+              >
+                Enviar um Email agora
+                <Mail size={18} />
+              </a>
             </div>
           </div>
         </div>

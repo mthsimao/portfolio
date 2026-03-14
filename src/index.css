@@ -12,6 +12,8 @@
   --color-p2: #e8ebed;
 
   --breakpoint-x5: 500px;
+
+  --shadow-1: 0 0 12px 4px rgba(0, 0, 0, 0.05);
 }
 
 :root {
@@ -28,6 +30,11 @@
   --color-blue-cl: #82afff;
   --color-nd: #000032;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   scroll-behavior: smooth;
   min-width: 320px;
