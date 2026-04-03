@@ -65,7 +65,7 @@ function App() {
               <div className="w-full md:w-5/12 flex justify-center md:justify-end">
                 <div className="relative group">
                   {/* Moldura Animada */}
-                  <div className="absolute -inset-1 bg-gradient-to-tr from-emerald-500 to-blue-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
+                  <div className="absolute -inset-1 bg-linear-to-tr from-emerald-500 to-blue-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
                   
                   <div className="relative bg-zinc-900 p-2 w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border border-white/10">
                     <div className="w-full h-full rounded-full overflow-hidden transition-all duration-700 ease-in-out">
