@@ -10,7 +10,7 @@ function Skills() {
       name: "HTML5",
       img: htmlImg,
       color: "hover:border-orange-500/50",
-      desc: "Estruturação semântica avançada com foco em SEO e acessibilidade (A11y).",
+      desc: "Estruturação semântica avançada e acessibilidade.",
     },
     {
       name: "CSS3",
@@ -22,7 +22,7 @@ function Skills() {
       name: "JavaScript",
       img: jsImg,
       color: "hover:border-yellow-500/50",
-      desc: "Manipulação de DOM, consumo de APIs e lógica de programação assíncrona (ES6+).",
+      desc: "Manipulação de DOM, consumo de APIs e lógica de programação assíncrona.",
     },
     {
       name: "Tailwind CSS",
