@@ -1,5 +1,5 @@
 import { ArrowRight, Sparkles } from "lucide-react";
-import imageMe from "./assets/images/me.jpeg";
+import imageMe from "./assets/images/me.png";
 import Header from "./components/Header";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
