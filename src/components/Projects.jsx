@@ -51,7 +51,7 @@ function Projects() {
                 <div className="flex justify-between items-start">
                   <div>
                     <h3 className="text-2xl font-bold group-hover:text-emerald-400 transition-colors">
-                      Planejador Financeiro Pessoal
+                      Carteira Inteligente
                     </h3>
                     <div className="flex gap-2 mt-2">
                       <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-zinc-800 text-zinc-400 border border-zinc-700">
@@ -65,6 +65,9 @@ function Projects() {
                       </span>
                       <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-zinc-800 text-zinc-400 border border-zinc-700">
                         IA
+                      </span>
+                      <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-zinc-800 text-zinc-400 border border-zinc-700">
+                        WEB APP
                       </span>
                     </div>
                   </div>
