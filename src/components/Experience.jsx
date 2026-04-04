@@ -51,7 +51,7 @@ function Experience() {
                   <li className="flex gap-3 text-sm leading-relaxed">
                     <span className="text-blue-500 mt-1.5 shrink-0">●</span>
                     <span>
-                      Suporte técnico N1 e troubleshooting de hardware e
+                      Suporte técnico e troubleshooting de hardware e
                       software para a equipe local.
                     </span>
                   </li>
@@ -82,8 +82,8 @@ function Experience() {
                   <li className="flex gap-3 text-sm leading-relaxed">
                     <span className="text-yellow-500 mt-1.5 shrink-0">●</span>
                     <span>
-                      Desenvolvimento de interfaces modernas utilizando **HTML5,
-                      CSS3 e JavaScript**.
+                      Desenvolvimento de interfaces modernas utilizando HTML5,
+                      CSS3 e JavaScript.
                     </span>
                   </li>
                   <li className="flex gap-3 text-sm leading-relaxed">
